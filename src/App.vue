@@ -4,11 +4,17 @@ import Main from './components/Main.vue';
 import Footer from './components/Footer.vue';
 
 export default {
+    data(){
+        return{
+            name : 'App',
+        }
+    },
+    
     components : {
         Header,
         Main,
         Footer
-    }
+    },
 }
 </script>
 
