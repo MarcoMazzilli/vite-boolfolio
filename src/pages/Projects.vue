@@ -1,6 +1,7 @@
 <script>
 import { store } from "../data/store";
 import axios from "axios";
+import ProjectCard from "../components/microComponents/ProjectCard.vue";
 
 export default {
     data() {
@@ -11,6 +12,9 @@ export default {
             links: [],
             currentPage: null
         };
+    },
+    components : {
+        ProjectCard
     },
     methods: {
         getApi(url) {
@@ -33,7 +37,7 @@ export default {
         <h1>Hello there! I'm Marco Vittorio</h1>
         <div class="container-fluid p-5">
 
-            <table class="table">
+            <!-- <table class="table">
                 <thead>
                     <tr>
                         <th scope="col">Project name</th>
@@ -48,7 +52,18 @@ export default {
                         <td class="col col-3">{{ post.url }}</td>
                     </tr>
                 </tbody>
-            </table>
+            </table> -->
+            <div class="project-wrapper">
+                <div class="row row-cols-3 justify-content-between">
+
+                    
+                    <project-card class="col"
+                        v-for="post in allPost" :key="post.id"
+                        :post="post">
+                    </project-card>
+                
+            </div>
+            </div>
 
             <div class="nav-button px-5 text-end">
                 <button
