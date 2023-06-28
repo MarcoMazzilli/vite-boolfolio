@@ -24,7 +24,7 @@ export default {
                     <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
                 </div>
                 <div class="my-2 text-end">
-                    <router-link class="btn btn-primary" :to="{name : 'projectDetails'}">Dettagli</router-link>
+                    <router-link class="btn btn-primary" :to="{name : 'projectDetails', params : {slug: post.slug}}">Dettagli</router-link>
                 </div>
             </div>
         </div>

@@ -20,10 +20,10 @@ const router = createRouter({
             component : Projects
         },
         {
-            path :'/dettagli',
+            path :'/dettagli/:slug',
             name: 'projectDetails',
             component : ProjectsDetails
-        },
+        }
     ]
 
 })
