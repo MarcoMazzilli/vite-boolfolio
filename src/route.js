@@ -3,6 +3,7 @@ import { createRouter , createWebHistory} from 'vue-router'
 import Home     from './pages/Home.vue';
 import Projects from './pages/Projects.vue';
 import ProjectsDetails from './pages/ProjectDetails.vue';
+import ContactUsForm from './pages/ContactUsForm.vue'
 
 const router = createRouter({
 
@@ -23,6 +24,11 @@ const router = createRouter({
             path :'/dettagli/:slug',
             name: 'projectDetails',
             component : ProjectsDetails
+        },
+        {
+            path :'/contatti',
+            name: 'contacts',
+            component : ContactUsForm
         }
     ]
 
